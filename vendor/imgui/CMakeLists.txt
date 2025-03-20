@@ -1,8 +1,6 @@
 # vendor/imgui/CMakeLists.txt
 message(STATUS "Fetching imgui...")
 
-set(CMAKE_CXX_STANDARD 20)
-
 FetchContent_GetProperties(imgui)
 if (NOT imgui_POPULATED)
     FetchContent_Populate(imgui)
