@@ -10,7 +10,7 @@ CMain::CMain() {
     // Setup SDL
     // [If using SDL_MAIN_USE_CALLBACKS: all code below until the main loop starts would likely be your SDL_AppInit() function]
     if (!SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMEPAD)) {
-        printf("Error: SDL_Init(): %s\n", SDL_GetError());
+        spdlog::error("Error: SDL_Init(): {}", SDL_GetError());
         exit(-1);
     }
 
@@ -52,13 +52,13 @@ CMain::CMain() {
     Uint32 window_flags = SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_HIDDEN;
     _window = SDL_CreateWindow("Dear ImGui SDL3+OpenGL3 example", 1280, 720, window_flags);
     if (_window == nullptr) {
-        printf("Error: SDL_CreateWindow(): %s\n", SDL_GetError());
+        spdlog::error("Error: SDL_CreateWindow(): {}", SDL_GetError());
         exit(-1);
     }
     SDL_SetWindowPosition(_window, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
     _gl_context = SDL_GL_CreateContext(_window);
     if (_gl_context == nullptr) {
-        printf("Error: SDL_GL_CreateContext(): %s\n", SDL_GetError());
+        spdlog::error("Error: SDL_GL_CreateContext(): {}", SDL_GetError());
         exit(-1);
     }
 
