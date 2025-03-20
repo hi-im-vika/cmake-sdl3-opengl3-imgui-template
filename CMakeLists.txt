@@ -8,4 +8,4 @@ find_package(OpenGL REQUIRED)
 find_package(spdlog REQUIRED)
 
 add_executable(myproject src/CMain.cpp)
-target_link_libraries(myproject cppbase ${OPENGL_LIBRARY} imgui)
+target_link_libraries(myproject cppbase ${OPENGL_LIBRARY} imgui spdlog::spdlog)
