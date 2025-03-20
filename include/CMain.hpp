@@ -34,7 +34,7 @@ private:
     int _imgui_ctr;
 
     std::string _text;
-    uint _count;
+    unsigned int _count;
 
 public:
     CMain();
