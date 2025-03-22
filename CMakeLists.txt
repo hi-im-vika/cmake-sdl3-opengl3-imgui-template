@@ -11,7 +11,7 @@ find_package(imgui CONFIG REQUIRED)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE imgui::imgui)
 
 find_package(OpenGL REQUIRED)
-target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ${OPENGL_LIBRARY})
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE OpenGL::GL)
 
-find_package(spdlog REQUIRED)
-target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE spdlog::spdlog)
+find_package(spdlog CONFIG REQUIRED)
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE spdlog::spdlog_header_only)
