@@ -9,6 +9,9 @@ html
 # CLion configuration
 .idea
 
+# Visual Studio
+.vs
+
 # macOS
 .DS_Store
 .AppleDouble
