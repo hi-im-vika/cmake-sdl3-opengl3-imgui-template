@@ -24,3 +24,6 @@ For Visual Studio, the folder must be opened as a CMake project.
 This project successfully compiles and builds on a Steam Deck running SteamOS, with Homebrew
 and vcpkg installed. CMake must be told to use `gcc` from Homebrew to see libraries installed
 through Homebrew and for vcpkg to build packages with those libraries.
+#### Steam Deck
+Until I find a better way, set `CC=<path/to/homebrew/gcc>` and `CXX=<path/to/homebrew/g++>`.
+Installing `pkgconf` might be helpful too.
